@@ -1,0 +1,25 @@
+{
+  "_comment": "Client 0 is the known acting client; its contribution is subtracted from the aggregate. Clients 1+ hold the private sentences the attack reconstructs. 'weight' is each client's aggregation weight (e.g. its example count).",
+  "clients": [
+    {
+      "weight": 1.0,
+      "texts": [
+        "The committee reviewed the proposal and approved the revised schedule."
+      ]
+    },
+    {
+      "weight": 1.0,
+      "texts": [
+        "Please send the signed contract to the finance office by Friday.",
+        "The quarterly report is attached for your review."
+      ]
+    },
+    {
+      "weight": 1.0,
+      "texts": [
+        "Our flight lands at nine and the hotel is a short walk away.",
+        "Let me know if the meeting time still works for everyone."
+      ]
+    }
+  ]
+}

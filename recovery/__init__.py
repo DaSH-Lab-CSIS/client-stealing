@@ -1,0 +1,143 @@
+"""Flat public API for the one-round FL-gradient text-recovery package."""
+from __future__ import annotations
+
+from .model import (
+    configure_cuda_numerics,
+    embeddings_are_tied,
+    is_neox_parallel_model,
+    load_public_model,
+    model_support,
+    parallel_attention_weight,
+    parallel_base_model,
+    parallel_layers,
+    parallel_mlp_output_weight,
+    parallel_source_kind,
+    parallel_token_activation,
+    require_supported_model,
+    selected_parameters,
+    tensors_to_device,
+)
+from .capture import (
+    capture,
+    load_client_payload,
+    redact_references,
+    reference_rows,
+    subtract_known_client,
+)
+from .search import (
+    ContextMembership,
+    HeadSketch,
+    cached_step,
+    cloud_transform,
+    covariance_cloud_transforms,
+    extract_source_directions,
+    features,
+    fork_cached_state,
+    full_prefix_step,
+    generic_cached_step,
+    last_states,
+    parallel_cached_step,
+    ranked_unique_candidates,
+    search,
+    select,
+    select_cached_state,
+    sentence_start_like_tokens,
+)
+from .verify import (
+    anchor_good_mask,
+    base_metadata,
+    candidate_cotangents,
+    evaluate,
+    hypothesis_gradient,
+    topk_counts,
+    verify_candidates,
+    verify_gradient,
+)
+from .pipeline import (
+    PEEL_METADATA_KEYS,
+    load_or_capture_snapshot,
+    metadata_identity,
+    redact_metrics,
+    run_or_load_anchor,
+    run_or_load_search,
+    summarize,
+    tolerance_tag,
+    write_json,
+    write_pool_diagnostic,
+)
+from .peel import (
+    run_peeling,
+    write_peel_result,
+)
+from .cli import (
+    main,
+    parse_args,
+)
+
+__all__ = [
+    # model
+    "configure_cuda_numerics",
+    "embeddings_are_tied",
+    "is_neox_parallel_model",
+    "load_public_model",
+    "model_support",
+    "parallel_attention_weight",
+    "parallel_base_model",
+    "parallel_layers",
+    "parallel_mlp_output_weight",
+    "parallel_source_kind",
+    "parallel_token_activation",
+    "require_supported_model",
+    "selected_parameters",
+    "tensors_to_device",
+    # capture
+    "capture",
+    "load_client_payload",
+    "redact_references",
+    "reference_rows",
+    "subtract_known_client",
+    # search
+    "ContextMembership",
+    "HeadSketch",
+    "cached_step",
+    "cloud_transform",
+    "covariance_cloud_transforms",
+    "extract_source_directions",
+    "features",
+    "fork_cached_state",
+    "full_prefix_step",
+    "generic_cached_step",
+    "last_states",
+    "parallel_cached_step",
+    "ranked_unique_candidates",
+    "search",
+    "select",
+    "select_cached_state",
+    "sentence_start_like_tokens",
+    # verify
+    "anchor_good_mask",
+    "base_metadata",
+    "candidate_cotangents",
+    "evaluate",
+    "hypothesis_gradient",
+    "topk_counts",
+    "verify_candidates",
+    "verify_gradient",
+    # pipeline
+    "PEEL_METADATA_KEYS",
+    "load_or_capture_snapshot",
+    "metadata_identity",
+    "redact_metrics",
+    "run_or_load_anchor",
+    "run_or_load_search",
+    "summarize",
+    "tolerance_tag",
+    "write_json",
+    "write_pool_diagnostic",
+    # peel
+    "run_peeling",
+    "write_peel_result",
+    # cli
+    "main",
+    "parse_args",
+]
