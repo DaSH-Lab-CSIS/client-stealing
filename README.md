@@ -2,7 +2,7 @@
 
 # Stealing Exact Training Data from Clients during Federated Learning
 
-This repo is an official implementation for the paper *Stealing Exact Training Data from Clients during Federated Learning*.
+This repo is an official implementation for the paper *Stealing Exact Training Data from Clients during Federated Learning* (https://arxiv.org/abs/2611.24689).
 
 Malicious adversaries can employ gradient inversion attacks to reverse-engineer private data using the model updates of a round in Federated Learning (FL). While there have been developments in gradient inversion for text, exact text recovery by a malicious client has so far remained infeasible, as FedAvg entangles the gradient contributions of many clients and obscures the signal of any individual sentence. We introduce a novel attack pipeline that unwinds this entanglement progressively through an iterative loop, in which the gradient contributions of sentences recovered exactly in one round are subtracted from the aggregate, exposing the remaining sentences for recovery in the next iteration. We show, for the first time, exact sentence recovery, with 100\% precision, and on aggregates containing up to $4\times$ more tokens than the model's hidden dimension, we recover up to 80.2\% of client sentences exactly, a regime where existing attacks recover none exactly.
 
@@ -69,3 +69,17 @@ First-author order settled via a Clash Royale tournament.
 
 ## 5. Ethical Statement
 Our attack exposes a privacy risk in FL, a participating client may reconstruct other clients' training text from aggregate updates. This capability poses a dual-use risk, as it could enable unauthorized access to sensitive information. Our evaluation uses existing research datasets rather than data collected from deployed federated systems. Our aim is to inform privacy assessments and the development of stronger defenses, not to facilitate unauthorized data recovery.
+
+## 6. Citations
+If you found this work helpful, please feel free to cite our work: 
+```
+@misc{shrikanth2026stealingexacttrainingdata,
+      title={Stealing Exact Training Data from Other Clients during Federated Learning}, 
+      author={Omkar Shrikanth and Soham Dambalkar and Parag Jyoti Pal and Advik Raj Basani and Arnab K. Paul},
+      year={2026},
+      eprint={2611.24689},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2611.24689}, 
+}
+```
